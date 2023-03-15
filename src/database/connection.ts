@@ -5,10 +5,9 @@ import { ORM_CONFIG } from '../../ormconfig';
 // 连接数据库
 
 const connection = {
-  async create(callback?: (c: any) => void): Promise<void> {
+  async create(callback?: (c: DataSource) => void): Promise<void> {
     try {
       const connection = await new DataSource(ORM_CONFIG);
-
       if (callback) {
         callback(connection);
       }
