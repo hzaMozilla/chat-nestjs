@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import {
   TYPEORM_HOST,
   TYPEORM_USERNAME,
@@ -16,8 +17,8 @@ export const ORM_CONFIG = {
   database: TYPEORM_DATABASE,
   port: Number.parseInt(TYPEORM_PORT || '5432'),
   entities: [
-    PRODUCTION_ENV ? 'dist/src/entities/**/*.js' : 'src/entities/**/*.ts'
+    PRODUCTION_ENV ? 'dist/src/entities/**/*.js' : 'src/entities/**/*.ts',
   ],
   synchronize: true,
-  logging: false,
+  logging: false
 };
